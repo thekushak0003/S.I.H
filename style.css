@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url('DALL·E 2024-11-08 13.58.01 - A visually appealing and eye-catching image for the front page of a web app that tracks, analyzes, and reduces carbon footprints. The scene features a.webp'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    width: 50%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.sign-in {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-up {
+    left: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-in {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Adjusted spacing for the input fields */
+input {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 15px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Adjusted button positions */
+button.form-btn {
+    border-radius: 20px;
+    border: none;
+    background-color: #00ab66; 
+    color: #fff;
+    padding: 12px 50px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 15px; 
+}
+
+button.form-btn:hover {
+    background-color: #008a52; 
+}
+
+button.ghost {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 12px 30px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button.ghost:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adjusted social icon layout and spacing */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+.social-icons a {
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #00ab66; 
+    border-color: #00ab66;
+    color: #fff;
+}
+
+/* Adjusted overlay panel positions */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: linear-gradient(to right, #91c260, #55883B); /* Greenish gradient */
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    left: 0;
+    transform: translateX(0);  
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+    margin: 0px;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+    margin: 5%;
+}
+
+/* Adjust logo position */
+
+.logo2 {
+    max-width: 100px;
+    margin-bottom: 10px; 
+    margin-top: -30px;
+    border-radius: 50%; 
+}
+.logo1{
+    max-width: 100px;
+    margin-bottom: 10px; 
+    margin-top: -30px;
+    border-radius: 50%; 
+}
+
+a {
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 20px; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+h1 {
+    margin:5px;
+    position: relative; 
+    white-space: nowrap;
+}
+
+h2{
+    margin: 5%;
+    font-size:30px;
+}
+button.ghost {
+    background-color: transparent;
+    border-color: #006600;
+    margin: 20px;
+    
+}
+
+h5 {
+    margin: 5%;
+    font-size: 15px;
+    width: 100%; 
+    word-break: break-word; 
+    display: inline-block;
+    white-space: normal;
+    line-height: 1.5; 
+    max-height: 3em;
+    overflow: hidden;
+}
+
